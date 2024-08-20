@@ -1,0 +1,94 @@
+h2
+{
+    text-align: center;
+}
+body 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #8bb3ff;
+}
+
+/* outer div */
+.border
+{
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 388px;
+    background-color: #dbeafe;
+}
+
+form select, input 
+{
+    width: 95%;
+    border: none;
+    border-radius: 1.5rem;
+    border: 1px solid darkcyan;
+    font-size: 0.85rem;
+    padding-left: 0.5rem;
+}
+ 
+
+.dropdown
+{
+    display: flex;
+    justify-content: space-between;  /*goes to end*/
+    align-items: center;
+}
+
+
+/* Image Width */
+.select-container img
+{
+    max-width: 2rem;
+}
+
+
+.select-container
+{
+    display: flex;
+    border:  1px solid darkcyan;
+    width: 6 rem;
+}
+
+/* meessage */
+form p
+{
+    padding-top: 10px    ;
+}
+
+
+/* Button */
+#b1
+{
+    display: flex;
+    justify-content: center;
+    padding-right: 46px;
+}
+button{
+    align-content: center;
+    margin: 20px 0px 20px 35px;
+    font-weight: 600;
+    height: 2.5rem;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+
+/* Icon */
+#i1
+{
+    margin: 20px 0px 20px 26px;
+    padding-right: 25px;
+    font-size: 1.2rem;
+}
+
+.components:hover
+{
+    border: 2px solid rgb(21, 181, 244);
+}
