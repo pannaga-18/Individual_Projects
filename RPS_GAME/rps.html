@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+    <div class="title">
+        Rock Paper Scissors
+    </div>
+
+    <div class="components">
+        <div class="image" id="rock" onclick="result('rock')">
+            <img src="C:\Users\jayshree\Desktop\Full_Stack_preparation\JS Tutorial\RPS\rock.png">
+        </div>
+        
+        <div class="image" id="paper" onclick="result('paper')">
+            <img src="C:\Users\jayshree\Desktop\Full_Stack_preparation\JS Tutorial\RPS\paper.png">
+        </div>
+        
+        <div class="image" id="scissors" onclick="result('scissors')">
+            <img src="C:\Users\jayshree\Desktop\Full_Stack_preparation\JS Tutorial\RPS\scissors.png">
+        </div>
+    </div>
+
+
+    <div class="score">
+        <div id="user">
+            <p id="user_score">0</p>
+            <p>USER</p>
+        </div>
+        <div id="comp">
+            <p id="comp_score">0</p>
+            <p>COMPUTER</p>
+        </div>
+    </div>
+
+    <div class="result">
+        <p class="disp_result">Please make your Choice!!</p>
+    </div>
+
+
+    <script src="rps.js">
+
+    </script>
+</body>
+</html>

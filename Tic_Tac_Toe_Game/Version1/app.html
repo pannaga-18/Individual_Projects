@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <h1> Tic Tac Toe </h1>
+
+    <!-- Rules Section -->
+    <div class="rules">
+        <p><b>GAME RULES</b></p>
+        <ul>
+            <li><b><i class="fa-solid fa-arrow-right"></i> Players:</b> Choose ("X" for one player and "O" for the
+                other)</li>
+            <li><b><i class="fa-solid fa-arrow-right"></i> Starting Player:</b> The game usually starts with "X", and
+                then with alternate turns.</li>
+            <li><b><i class="fa-solid fa-arrow-right"></i> Game Play:</b> Players take turns placing their mark in an
+                empty cell of the grid. Once marked, cannot change.</li>
+            <li><b><i class="fa-solid fa-arrow-right"></i> Legal Moves:</b> Players can only place their mark in an
+                empty cell that has not been already marked.</li>
+            <li><b><i class="fa-solid fa-arrow-right"></i> Scenarios:</b></li>
+            <ul>
+                <li class="c1"><b>Winning:</b> A player wins if they have three of their marks in a row (horizontal,
+                    vertical, or diagonal).</li>
+                <li class="c1"><b>Draw:</b> If the entire grid is filled without either player achieving a winning line,
+                    the game is a draw.</li>
+            </ul>
+            <li><b><i class="fa-solid fa-arrow-right"></i> Play Again Selection:</b> As 'X' is taken as default in the initial Game. During the re-game, display of the symbol will be effected only after selecting the slot.</li>
+        </ul>
+
+        <!-- Proceed Button -->
+        <div class="btn">
+            <button title="One Time Clickable" id="btn1" onclick="proceed()"> Proceed </button>
+        </div>
+    </div>
+
+    
+    <!-- Details Section -->
+    <div class="Container">
+        <div id="details" class="details" style="display: none;">
+            <h3>Player's Details</h3>
+            <div class="p_details">
+                <p id="p1">PLAYER 1: <input placeholder="Enter your Name" id="p1_name"></p>
+                Choose Symbol:
+                <select name="Player1" id="pc1">
+                    <option value="X" selected>X</option>
+                    <option value="O">O</option>
+                </select>
+                <p id="p2">PLAYER 2: <input placeholder="Enter your Name" id="p2_name"></p>
+                Choose Symbol:
+                <select name="Player2" id="pc2">
+                    <option value="X">X</option>
+                    <option value="O" selected>O</option>
+                </select>
+            </div>
+
+            <!-- Start Button -->
+            <div class="btn">
+                <button title="One Time Clickable" id="btn2" onclick="start_button()"> Start Game </button>
+            </div>
+        </div>
+
+
+        <!-- Turns Section -->
+        <div class="turns" id="turns" style="display: none;">
+            <div>
+                <p> YOUR TURN </p>
+            </div>
+            <div id="p1_turn" class="p_turn">
+                <p id="pp1"></p>
+            </div>
+            <div id="p2_turn" class="p_turn">
+                <p id="pp2"></p>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!-- Game -->
+    <div class="d"></div>
+
+    <!-- Result -->
+    <div class="result" style="display: none;">
+        <p id="disp_result"></p>
+    </div>
+
+
+    <!-- Play/Finish Section -->
+    <div id="PAF" style="display: none;">
+        <div class="finish_again_section">
+            <button class="fabtn" id="btn3">Play Again</button>
+        </div>
+        
+        <div class="finish_again_section">
+            <button title="One Time Clickable" class="fabtn" id="btn4">Finish</button>
+        </div>
+    </div>
+
+
+    <!-- Game Ends -->
+    <div class="game_ends" style="display: none;">
+        <P id="ge"> Game Ends!! </P>
+    </div>
+
+
+        <script src="app.js">
+
+        </script>
+</body>
+
+</html>

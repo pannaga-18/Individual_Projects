@@ -1,0 +1,141 @@
+.title {
+    height: 70px;
+    ;
+    width: 100%;
+    
+    /* To display: at center; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* OR */
+
+    text-align: center;
+    line-height: 4rem;
+
+
+    background-color: rgb(101, 90, 90);
+    color: rgb(245, 232, 232);
+    font-size: x-large;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+.components {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+
+    /* OR */
+    justify-content: center;
+    gap: 8rem;
+}
+
+
+.image{
+    /* height: 200px;
+    width: 200px;
+    border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    
+    /* To reduce the shrink */
+    object-fit: cover;
+}
+
+img:hover
+{
+    border:4px solid rgb(86, 82, 82);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* @keyframes bortrans
+{
+    from{
+        
+        border:4px solid rgb(193, 186, 186);
+    }
+
+    to{
+        border-color:4px solid rgb(86, 82, 82);
+    }
+} */
+
+
+.score
+{
+    text-align: center;
+    height: 220px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#user
+{
+    height: 200px;
+    width: 200px;
+}
+
+#comp
+{
+    height: 200px;
+    width: 200px;
+}
+
+p{
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.result
+{
+    text-align: center;
+    margin-left: 35%;
+    background-color: darkgray;
+    width: 500px;
+    height: 60px;
+    border: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.user_background
+{
+    margin-left: 35%;
+    background-color: green;
+    width: 500px;
+    height: 60px;
+    border: 4px solid rgb(243, 251, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+}
+
+.comp_background
+{
+    margin-left: 35%;
+    background-color: red;
+    width: 500px;
+    height: 60px;
+    border: 4px solid rgb(248, 116, 16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+}
