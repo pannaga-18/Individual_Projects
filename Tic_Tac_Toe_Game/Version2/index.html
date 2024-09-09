@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,15 +34,17 @@
                 <li class="c1"><b>Draw:</b> If the entire grid is filled without either player achieving a winning line,
                     the game is a draw.</li>
             </ul>
-            <li><b><i class="fa-solid fa-arrow-right"></i> Play Again Selection:</b> As 'X' is taken as default in the initial Game. During the re-game, display of the symbol will be effected only after selecting the slot.</li>
+            <li><b><i class="fa-solid fa-arrow-right"></i> Play Again Selection:</b> As 'X' is taken as default in the
+                initial Game. During the re-game, display of the symbol will be effected only after selecting the slot.
+            </li>
         </ul>
 
         <div class="btn">
-            <button title="One Time Clickable" id="btn1" onclick="proceed()"> Proceed </button>
+            <button title="One Time Clickable" id="btn1"> Proceed </button>
         </div>
     </div>
-    <div class="Container" >
-        
+    <div class="Container">
+
         <!-- Details Section -->
         <!-- <div id="details" class="details" style="display: none;">
             <h3>Player's Details</h3>
@@ -70,35 +72,35 @@
         <div id="details" class="details" style="display: none;">
             <h3>Player's Details</h3>
             <div class="p_details">
-                <p id="p1">PLAYER 1: <input placeholder="Enter your Name" id="p1_name" >
-                                <small class="dm" id="dm1">*Field cannot be empty</small>
+                <p id="p1">PLAYER 1: <input placeholder="Enter your Name" id="p1_name">
+                    <small class="dm" id="dm1">*Field cannot be empty</small>
                 </p>
-    
+
                 Choose Symbol:
                 <select name="Player1" id="pc1">
                     <option value="X" selected>X</option>
                     <option value="O">O</option>
                 </select>
-    
+
                 <p class="err_sym"><small id="err_sym1" style="display: none;">*cannot have same symbols</small></p>
-    
-    
+
+
                 <p id="p2">PLAYER 2: <input placeholder="Enter your Name" id="p2_name">
                     <small class="dm" id="dm2" style="display: none;">*Field cannot be empty</small>
                 </p>
-    
+
                 Choose Symbol:
                 <select name="Player2" id="pc2">
                     <option value="X">X</option>
                     <option value="O" selected>O</option>
                 </select>
-    
+
                 <p class="err_sym"><small id="err_sym2" style="display: none;">*cannot have same symbols</small></p>
-    
+
             </div>
-    
+
             <div class="btn">
-                <button title="One Time Clickable" id="btn2" onclick="start(), start_button()"> Start Game </button>
+                <button title="One Time Clickable" id="btn2"> Start Game </button>
             </div>
         </div>
 
@@ -117,7 +119,7 @@
         </div>
     </div>
 
-    
+
     <!-- Game -->
     <div class="d"></div>
 
@@ -132,21 +134,47 @@
         <div class="finish_again_section">
             <button class="fabtn" id="btn3">Play Again</button>
         </div>
-        
+
         <div class="finish_again_section">
             <button title="One Time Clickable" class="fabtn" id="btn4">Finish</button>
         </div>
 
+        <div class="finish_again_section"></div>
+            <button title="One Time Clickable" class="fabtn" id="btn5">Show LeaderBoard</button>
+        </div>
     </div>
 
 
     <!-- Game Ends -->
-    <div class="game_ends" style="display: none;">
+    <div id="game_ends" style="display: none;">
         <P id="ge"> Game Ends!! </P>
     </div>
 
-        <script src="test.js"></script>
-        <script src="Player_details.js"></script>
+    <section class="centered-section" id="centered-section" style="display: none;">
+        <div id="reservationsContent" class="reservations-content">
+            <h2 class="leaderboard-heading">Leader Board</h2>
+            <!-- Reservation Table -->
+            <div id="tableContainer">
+                <table id="reservationsTable">
+                    <thead>
+                        <!-- Headers will be dynamically inserted here -->
+                    </thead>
+                    <tbody id="reservationsTableBody">
+                        <!-- Reservation rows will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="Player_details.js"></script>
+
+    <script type="module" src="script.js"></script>
+
+    <script type="module" src="backend.js"></script>
 </body>
 
 </html>
