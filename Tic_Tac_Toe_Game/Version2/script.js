@@ -1,3 +1,4 @@
+import { update_leaderboard } from './backend.js';
 // Proceed 
 
 // function proceed()
@@ -49,6 +50,13 @@
 //     disable_proceed.disabled = true; 
 // }
 
+
+
+document.getElementById("btn1").addEventListener('click', ()=>proceed());
+
+document.getElementById("btn2").addEventListener('click', ()=>{
+    start_button();
+});
 
 // Proceed Button
 function proceed() {
@@ -528,26 +536,31 @@ function display_result(sym) {
 
     if (sym === "x" && p1_choice === "X") {
         msg = `Congratulations ${player1_name}, You Won!!`;
+        update_leaderboard(player1_name, player2_name, 1);
         f = 1;
     }
 
     if (sym === "o" && p1_choice === "O") {
         msg = `Congratulations ${player1_name}, You Won!!`;
+        update_leaderboard(player1_name, player2_name, 1);
         f = 1;
     }
 
     if (sym === "o" && p2_choice === "O") {
         msg = `Congratulations ${player2_name}, You Won!!`;
+        update_leaderboard(player2_name, player1_name, 2);
         f = 0;
     }
 
     if (sym === "x" && p2_choice === "X") {
         msg = `Congratulations ${player2_name}, You Won!!`;
+        update_leaderboard(player2_name, player1_name, 2);
         f = 0;
     }
 
     if (sym === "-") {
         msg = "Game is drawn, Well Played!";
+        update_leaderboard(player1_name, player2_name, 0);
         f = 1;
     }
 
@@ -582,13 +595,12 @@ function remove_event_listener(evt) {
 }
 
 
-
 // Game Ends message
 const finish_btn = document.getElementById("btn4");
 finish_btn.addEventListener('click', () => {
-    game_ends = document.querySelector(".game_ends");
+    let game_ends = document.querySelector("#game_ends");
     game_ends.style.display = "flex";
-    game_ends.disabled = true;
+    finish_btn.disabled = true;
 
     document.querySelector("#btn3").disabled = true;
 
@@ -601,7 +613,7 @@ function play_again() {
     document.querySelector(".finish_again_section").style.display = "none";
     document.getElementById("btn3").style.display = "none";
     document.getElementById("btn4").style.display = "none";
-    document.querySelector(".game_ends").style.display = "none";
+    document.querySelector("#game_ends").style.display = "none";
 
     Game_2();
     c = 0;
@@ -624,16 +636,16 @@ play_again_btn.addEventListener('click', () => {
 
 
 // Highlighting symbols for game 2
-function highlight_turns2(f) {
-    if (f === 1) {
-        document.getElementById("p2_turn").style.border = " 2px solid red";
-        document.getElementById("p1_turn").style.border = " 2px solid green";
-    }
-    else {
-        document.getElementById("p1_turn").style.border = " 2px solid red";
-        document.getElementById("p2_turn").style.border = " 2px solid green";
-    }
-}
+// function highlight_turns2(f) {
+//     if (f === 1) {
+//         document.getElementById("p2_turn").style.border = " 2px solid red";
+//         document.getElementById("p1_turn").style.border = " 2px solid green";
+//     }
+//     else {
+//         document.getElementById("p1_turn").style.border = " 2px solid red";
+//         document.getElementById("p2_turn").style.border = " 2px solid green";
+//     }
+// }
 
 
 
