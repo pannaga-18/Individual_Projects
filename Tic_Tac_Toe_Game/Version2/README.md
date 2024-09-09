@@ -1,4 +1,4 @@
-A Simple user friendly Tic Tac Toe Game with LeaderBoard feature.
+A Simple user friendly **Tic Tac Toe** Game with LeaderBoard feature.
 
 Languages Used: HTML, CSS, JS, Firebase as Baas. 
 
