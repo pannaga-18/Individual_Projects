@@ -15,8 +15,6 @@ Adding second work
 Editing current todo to new todo
 ![G4](https://github.com/user-attachments/assets/b854854b-eac5-4a8c-975f-e403b0c8f368)
 
-
-
 On completing todo
 ![G6](https://github.com/user-attachments/assets/897e9ba0-44d9-4d23-925a-bb87f266cc6f)
 
