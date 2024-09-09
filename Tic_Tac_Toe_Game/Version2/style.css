@@ -1,7 +1,8 @@
-body{
+body {
     background-color: #8bb3ff;
 }
-h1{
+
+h1 {
     text-align: center;
     font-family: cursive;
     font-weight: 900;
@@ -9,7 +10,7 @@ h1{
 }
 
 /* RULES */
-.rules{
+.rules {
     background-color: #dbeafe;
     margin-top: 70px;
     width: 770px;
@@ -18,7 +19,7 @@ h1{
     border-radius: 10px;
 }
 
-.rules p{
+.rules p {
     text-align: center;
     font-family: monospace;
     font-size: 25px;
@@ -27,71 +28,102 @@ h1{
 
 
 /* LIST */
-.rules ul{
+.rules ul {
     line-height: 1.8;
     list-style-type: none;
 }
 
-.c1{
+.c1 {
     list-style-type: circle;
 }
 
 /* Button */
-.btn
-{
+.btn {
     display: flex;
     justify-content: center;
 }
 
-button{
+button {
     border-radius: 7px;
-    border:none;
+    border: none;
     height: 25px;
-    background-color:grey;
+    background-color: grey;
     font-weight: 760;
 }
 
-button:hover
-{
+button:hover {
     border: 2px solid cornflowerblue;
 }
 
+@media screen and (max-width: 780px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .rules {
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    /* Player Details */
+
+    #details {
+        height: fit-content;
+        width: 300px;
+        border-radius: 10px;
+        background-color: red;
+    }
 
 
+    h3 {
+        text-align: center;
+    }
+
+    .p_details {
+        margin: 40px 0 0 20px;
+    }
+
+    input {
+        border-radius: 5px;
+    }
+}
+
+::-webkit-scrollbar-track {
+    color: black;
+}
 
 /*  Details */
 
-#details
-{
+#details {
     height: fit-content;
     width: 300px;
     border-radius: 10px;
     background-color: #dbeafe;
-    /* display: none; */
 }
 
-h3{
+h3 {
     text-align: center;
 }
 
-.p_details
-{
+.p_details {
     margin: 40px 0 0 20px;
 }
 
-input{
+input {
     border-radius: 5px;
 }
 
-#btn2{
+#btn2 {
     margin-top: 20px;
 }
 
 
 
 /* Turns */
-#turns
-{
+#turns {
     display: flex;
     /* flex-wrap: wrap; */
     align-items: center;
@@ -103,8 +135,7 @@ input{
     border-radius: 10px;
 }
 
-.Container
-{
+.Container {
     width: 770px;
     height: 350px;
     display: flex;
@@ -126,8 +157,7 @@ input{
 }
 
 
-.p_turn
-{
+.p_turn {
     position: relative;
     width: 90px;
     height: 70px;
@@ -136,15 +166,15 @@ input{
 }
 
 
-.symbol
-{
-    position:absolute;
+.symbol {
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%); 
+    transform: translate(-50%, 50%);
 }
 
-#pp1, #pp2{
+#pp1,
+#pp2 {
     text-align: center;
 }
 
@@ -154,45 +184,47 @@ input{
 
 
 /* Game */
-.d
-{
+.d {
     display: flex;
-    justify-content:left;
+    justify-content: left;
     flex-wrap: wrap;
     height: 306px;
     width: 312px;
-    position:relative;
+    position: relative;
 
-    left: 1010px;
+    left: 1300px;
     bottom: 660px;
     /* right: 190px;
     top: 190px; */
 }
 
-.divs
-{
+.divs {
     width: 100px;
     height: 100px;
     border: 2px solid black;
 }
 
- #d1, #d2, #d3
-{
+#d1,
+#d2,
+#d3 {
     border-top: none;
-} 
+}
 
-#d1, #d4, #d7
-{
+#d1,
+#d4,
+#d7 {
     border-left: none;
 }
 
-#d7, #d8, #d9
-{
+#d7,
+#d8,
+#d9 {
     border-bottom: none;
 }
 
-#d3, #d6, #d9
-{
+#d3,
+#d6,
+#d9 {
     border-right: none;
 }
 
@@ -211,28 +243,26 @@ input{
     padding-left: 10px;
 } */
 
-.large
-{
+.large {
     padding: 5px 0 0 6px;
     font-size: 88px;
 }
-.icon
-{
+
+.icon {
     color: darkblue;
 }
 
 
 
 /* Display Result */
-.result
-{
+.result {
     display: none;
     align-items: center;
     justify-content: center;
     position: relative;
-    left: 920px;
+    left: 1200px;
     bottom: 515px;
-    height:70px;
+    height: 70px;
     width: 500px;
     border: 2px solid black;
     border-radius: 10px;
@@ -240,8 +270,7 @@ input{
 }
 
 
-#disp_result
-{
+#disp_result {
     font-family: cursive;
     font-weight: 500;
     font-size: 30px;
@@ -249,56 +278,51 @@ input{
 
 /* error display */
 
-.dm, .err_sym
-{
+.dm,
+.err_sym {
     margin-top: 0px;
     padding-left: 86px;
 }
 
-small{
+small {
     color: red;
 }
 
 /* Play Again and Finish */
-#PAF
-{
+#PAF {
     margin-top: 20px;
     position: relative;
-    left: 960px;
+    left: 1200px;
     bottom: 523px;
-    height: 70px;
-    width: 400px;
+    height: 100px;
+    width: 500px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.finish_again_section
-{
+/* .finish_again_section {
     height: 100px;
     margin-top: 40px;
     width: 100px;
-}
+} */
 
 /* B4, B5*/
-.fabtn
-{
+.fabtn {
     height: 35px;
     width: 100px;
     margin-left: 20px;
     font-size: 14px;
     align-items: center;
     justify-content: center;
-
 }
 
 
 /* Upon finishing */
 
-.game_ends
-{
+#game_ends {
     position: relative;
-    left: 1130px;
+    left: 1400px;
     bottom: 535px;
     display: flex;
     align-items: center;
@@ -310,5 +334,45 @@ small{
     border-radius: 10px;
     background-color: #dbeafe;
 }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    overflow-x: auto;
+    display: block;
+    position: absolute;
+    top: 990px;
+    left: 1125px;
+    align-items: center;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem; /* Adjust font size */
+}
+
+table th {
+    background-color: #0064AD;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.leaderboard-heading {
+    /* text-align: center; Center align the text */
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Add space below the heading */
+    /* color: #333; Choose a text color */
+    font-family: cursive;
+    position: absolute;
+    top: 940px;
+    left: 1380px;
+    /* text-align: center; */
+}
+
 
 
